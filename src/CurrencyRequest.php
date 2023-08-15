@@ -20,7 +20,7 @@ class CurrencyRequest extends FormRequest
         return [
             'amount' => ['required', 'numeric'],
             'currency' => [
-                'required',
+                'sometimes',
                 Rule::in(['USD', 'JPY', 'BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN', 'RON', 'SEK', 'CHF', 'ISK', 'NOK', 'TRY', 'AUD', 'BRL', 'CAD', 'CNY', 'HKD', 'IDR', 'ILS', 'INR', 'KRW', 'MXN', 'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR']),
                 'string',
                 'max:3'
