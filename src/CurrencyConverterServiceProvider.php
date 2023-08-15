@@ -50,7 +50,7 @@ class CurrencyConverterServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'currency-converter');
+        $this->mergeConfigFrom(__DIR__.'/../config/currency-converter.php', 'currency-converter');
 
         // Register the main class to use with the facade
         $this->app->singleton('currency-converter', function () {
