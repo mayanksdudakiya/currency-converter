@@ -17,9 +17,9 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^8.0",
         "darkaonline/l5-swagger": "^8.5",
-        "guzzlehttp/guzzle": "^7.2"
+        "guzzlehttp/guzzle": "^7.2",
+        "illuminate/support": "*"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
