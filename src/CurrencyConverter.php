@@ -16,7 +16,10 @@ class CurrencyConverter
     public function getCurrencyData(): array
     {
         try {
-            $response = Http::retry(3, 100)->get(config('currency-converter.exchange_url'));
+            $response = Http::retry(3, 100)
+                ->withOptions(['verify' => false])
+                ->get(config('currency-converter.exchange_url'));
+
             $xmlString = $response->body();
 
             return $this->prepareCurrencyLookupArray($xmlString);
