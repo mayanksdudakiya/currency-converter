@@ -29,7 +29,7 @@ class CurrencyConverter
      * @param string $xmlString
      * @return array<string|string>
      */
-    private function prepareCurrencyLookupArray(string $xmlString): array
+    public function prepareCurrencyLookupArray(string $xmlString): array
     {
         $xml = new SimpleXMLElement($xmlString);
 
