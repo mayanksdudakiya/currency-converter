@@ -21,7 +21,7 @@ class CurrencyConverterServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('currency-converter.php'),
+                __DIR__.'/../config/currency-converter.php' => config_path('currency-converter.php'),
             ], 'config');
 
             // Publishing the views.
